@@ -1,10 +1,12 @@
 SlotKisyu::Application.routes.draw do
-  get "pages/index"
+  resources :slot_names
+
+  get "slot_names/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => 'pages#index'
+  root :to => 'slot_names#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

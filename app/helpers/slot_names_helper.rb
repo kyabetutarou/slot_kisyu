@@ -1,0 +1,2 @@
+module SlotNamesHelper
+end

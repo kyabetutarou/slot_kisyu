@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="kisyu_name page-header ">
+  <%= @slot_name.name %>
+</h1>
+
+  <img class="kisyugazou" src="http://images2.p-world.co.jp/_machine/img/p<%= @slot_name.img %>_1.jpg" alt="<%= @slot_name.name %>" style="float:left"/>
+
+
+
+<p >
+  <strong>導入日:</strong>
+  <%= @slot_name.dounyuu %>
+</p>
+
+<p>
+  <strong>備考</strong>
+  <%= @slot_name.setumei %>
+</p>
+
+
+<p style="clear:both">
+<%= link_to 'Edit', edit_slot_name_path(@slot_name) %> |
+<%= link_to 'Back', slot_names_path %>
+</p>

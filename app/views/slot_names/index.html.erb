@@ -1,0 +1,33 @@
+<h1>Listing slot_names</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Dounyuu</th>
+      <th>Setumei</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slot_names.each do |slot_name| %>
+      <tr>
+        <td><%= slot_name.name %></td>
+        <td><%= slot_name.img %></td>
+        <td><%= slot_name.dounyuu %></td>
+        <td><%= slot_name.setumei %></td>
+        <td><%= link_to 'Show', slot_name %></td>
+        <td><%= link_to 'Edit', edit_slot_name_path(slot_name) %></td>
+        <td><%= link_to 'Destroy', slot_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slot name', new_slot_name_path %>
