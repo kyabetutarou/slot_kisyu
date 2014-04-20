@@ -1,5 +1,7 @@
 SlotKisyu::Application.routes.draw do
-  resources :slot_names
+  resources :slot_names do
+    resources:tasks,only:[:create, :destroy]
+  end
 
   get "slot_names/index"
   # The priority is based upon order of creation: first created -> highest priority.
