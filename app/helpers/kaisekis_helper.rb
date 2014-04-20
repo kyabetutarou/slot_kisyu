@@ -1,0 +1,2 @@
+module KaisekisHelper
+end
