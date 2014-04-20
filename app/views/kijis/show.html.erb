@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slot name:</strong>
+  <%= @kiji.slot_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @kiji.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @kiji.body %>
+</p>
+
+<%= link_to 'Edit', edit_kiji_path(@kiji) %> |
+<%= link_to 'Back', kijis_path %>

@@ -15,11 +15,13 @@
 
 <p>
   <strong>備考</strong>
-  <%= @slot_name.setumei %>
+  <%= simple_format(@slot_name.setumei) %>
 </p>
 
 
 <p style="clear:both">
+
+
 <%= link_to 'Edit', edit_slot_name_path(@slot_name) %> |
 <%= link_to 'Back', slot_names_path %>
 </p>
