@@ -1,6 +1,4 @@
 SlotKisyu::Application.routes.draw do
-  resources :kaisekis
-
   resources :slot_names
 
   get "slot_names/index"
