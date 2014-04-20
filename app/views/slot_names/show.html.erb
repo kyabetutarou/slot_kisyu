@@ -20,20 +20,6 @@
 
 
 <p style="clear:both">
-
-<ul>
-<% @slot_name.tasks.each do |task| %>
-<li><%= task.title %></li>
-<% end %>
-
-<li>
-    <%= form_for [@slot_name, @slot_name.tasks.build] do |f| %>
-    <%= f.text_field :title %>
-    <%= f.submit %>
-    <% end %>
-</li>
-</ul>
-
 <%= link_to 'Edit', edit_slot_name_path(@slot_name) %> |
 <%= link_to 'Back', slot_names_path %>
 </p>

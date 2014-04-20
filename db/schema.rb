@@ -11,27 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420031939) do
-
-  create_table "kaisekis", force: true do |t|
-    t.string   "kaiseki_title"
-    t.text     "kaiseki_kiji"
-    t.integer  "slot_name_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "kaisekis", ["slot_name_id"], name: "index_kaisekis_on_slot_name_id"
-
-  create_table "kijis", force: true do |t|
-    t.integer  "slot_name_id"
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "kijis", ["slot_name_id"], name: "index_kijis_on_slot_name_id"
+ActiveRecord::Schema.define(version: 20140414063922) do
 
   create_table "slot_names", force: true do |t|
     t.string   "name"
@@ -41,14 +21,5 @@ ActiveRecord::Schema.define(version: 20140420031939) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "tasks", force: true do |t|
-    t.string   "title"
-    t.integer  "slot_name_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "tasks", ["slot_name_id"], name: "index_tasks_on_slot_name_id"
 
 end
